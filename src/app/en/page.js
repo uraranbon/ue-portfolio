@@ -66,7 +66,7 @@ const En = () => {
             <ContentWrap>
               <div className="profile-box">
                 <p className="text">
-                  I joined web development company, LIG Inc., as an intern
+                  {`I joined web development company, LIG Inc., as an intern
                   during my third year of university. After graduating, I
                   officially joined the company in 2015. With a passion for
                   writing and a desire to become a professional writer, I became
@@ -75,10 +75,10 @@ const En = () => {
                   joined the DevRel team, and when the team transitioned to an
                   independent company called dotstudio Inc., I followed along.
                   At dotstudio, I contributed to the operation of media
-                  platforms focusing on IoT-related content.
+                  platforms focusing on IoT-related content.`}
                   <br />
                   <br />
-                  During my time at LIG Inc., I became close with a senior
+                  {`During my time at LIG Inc., I became close with a senior
                   colleague who was a Chief Engineer. Through our conversations,
                   I developed an interest in web development, leading me to
                   create my own website through self-study. The challenge of
@@ -89,7 +89,7 @@ const En = () => {
                   knowledge in the field. In August 2018, I joined BRISK Inc., a
                   web development company, as a Front-End Engineer, where I
                   utilized HTML, CSS, JavaScript, PHP, and other tools to create
-                  various web projects.
+                  various web projects.`}
                 </p>
               </div>
             </ContentWrap>

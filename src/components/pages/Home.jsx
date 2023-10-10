@@ -1,25 +1,18 @@
-"use client";
-
 import React from "react";
+import TwoColumn from "../organism/TwoColumn/TwoColumn";
+import SkillBox from "../atoms/SkillBox/SkillBox";
+import ExperienceBox from "../organism/ExperienceBox/ExperienceBox";
+import WorksBox from "../organism/WorksBox/WorksBox";
 import { motion } from "framer-motion";
 
 //atoms
-import ArticleLink from "../components/atoms/ArticleLink/ArticleLink";
-import Heading01 from "../components/atoms/Heading01/Heading01";
-import Heading02 from "../components/atoms/Heading02/Heading02";
-import SkillBox from "../components/atoms/SkillBox/SkillBox";
+import ArticleLink from "../atoms/ArticleLink/ArticleLink";
+import Heading01 from "../atoms/Heading01/Heading01";
+import Heading02 from "../atoms/Heading02/Heading02";
 
 //organism
-import KeyVisual from "../components/organism/KeyVisual/KeyVisual";
-import ArticlesWrap from "../components/organism/ArticlesWrap/ArticlesWrap";
-import ContentWrap from "../components/organism/ContentWrap/ContentWrap";
-import SkillsWrap from "../components/organism/SkillsWrap/SkillsWrap";
-import ExperienceBox from "../components/organism/ExperienceBox/ExperienceBox";
-import WorksBox from "../components/organism/WorksBox/WorksBox";
-import TwoColumn from "../components/organism/TwoColumn/TwoColumn";
-
-//templates
-import DefaultLayout from "../components/templates/DefaultLayout/DefaultLayout";
+import KeyVisual from "../organism/KeyVisual/KeyVisual";
+import ArticlesWrap from "../organism/ArticlesWrap/ArticlesWrap";
 
 //icon
 import {
@@ -43,22 +36,36 @@ import {
   SiAdobepremierepro,
 } from "react-icons/si";
 
-//data
-import { articles01 } from "../data/articles";
-import { articles02 } from "../data/articles";
+//templates
+import DefaultLayout from "../templates/DefaultLayout/DefaultLayout";
 
-const Home = () => {
+//image
+import mafumi from "../../image/mafumi.webp";
+
+//data
+import { articles01 } from "../../data/articles";
+import { articles02 } from "../../data/articles";
+import ContentWrap from "../organism/ContentWrap/ContentWrap";
+import SkillsWrap from "../organism/SkillsWrap/SkillsWrap";
+
+export const Home = () => {
   return (
     <DefaultLayout>
       <KeyVisual />
       <motion.section
         id="profile"
         className="sectionArea"
+        initial={{
+          opacity: 0,
+          y: 30,
+          transition: { duration: 1, delay: 1.4 },
+        }} // 初期状態
         animate={{
           opacity: 1,
           y: 0,
           transition: { duration: 1, delay: 1.4 },
-        }}
+        }} // マウント時
+        exit={{ opacity: 0, y: 0, transition: { duration: 1, delay: 1.4 } }} // アンマウント時
       >
         <div className="innerArea">
           <TwoColumn>
@@ -110,8 +117,6 @@ const Home = () => {
               <ExperienceBox
                 date="2015.3"
                 company={"獨協大学外国語学部交流文化学科 卒業"}
-                position=""
-                ja=""
               />
               <ExperienceBox
                 date="2015.4~2016.7"
@@ -157,7 +162,7 @@ const Home = () => {
         viewport={{ once: false, amount: 0 }}
       >
         <div className="innerArea">
-          <Heading01 title="skills" />
+          <Heading01 title="Skills" />
           <Heading02 title="実務経験あり" />
           <SkillsWrap>
             <SkillBox
@@ -297,6 +302,7 @@ const Home = () => {
             <Heading01 title="works" />
             <ContentWrap>
               <WorksBox
+                image={mafumi}
                 language="React × Next.js"
                 year="2023"
                 title="眞踏珈琲店 公式サイト（制作中）"
@@ -347,6 +353,7 @@ const Home = () => {
             },
           },
         }}
+        f
         initial="offscreen" // 初期表示はoffscreen
         whileInView="onscreen" // 画面内に入ったらonscreen
         viewport={{ once: false, amount: 0 }}
@@ -384,5 +391,3 @@ const Home = () => {
     </DefaultLayout>
   );
 };
-
-export default Home;

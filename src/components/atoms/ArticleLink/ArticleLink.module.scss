@@ -1,0 +1,78 @@
+@use "../../../styles/Mixin.scss" as *;
+
+/* --------------------------------
+  ArticleLink
+----------------------------------- */
+
+.articleLink {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba($color: var(--monotone02-rgba), $alpha: 0.5);
+  border-radius: 10px;
+  position: relative;
+  padding: 5px 15px 5px 15px;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
+  @include pc {
+    min-height: 72px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  @include sp {
+    gap: 10px;
+  }
+  &:hover,
+  &:focus {
+    @include pc {
+      background-color: var(--monotone01);
+      color: var(--monotone02);
+      &:after {
+        opacity: 1;
+      }
+    }
+  }
+  &::after {
+    content: "→";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--monotone02);
+    border-radius: 50%;
+    color: var(--monotone02);
+    font-weight: 100;
+    font-size: 12px;
+    transition: all 0.3s;
+    flex-shrink: 0;
+    @include pc {
+      opacity: 0;
+      width: 40px;
+      height: 40px;
+    }
+    @include sp {
+      border: 1px solid var(--monotone01);
+      color: var(--monotone01);
+      width: 24px;
+      height: 24px;
+    }
+  }
+}
+
+.text {
+  font-size: 15px;
+  line-height: 1.4;
+  @include sp {
+    padding: 10px;
+  }
+}
+
+.time {
+  @include pc {
+    margin-right: 1em;
+  }
+  @include sp {
+    display: block;
+  }
+}

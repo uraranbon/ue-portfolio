@@ -1,0 +1,18 @@
+@use "../../../styles/Mixin.scss" as *;
+
+/* --------------------------------
+  MouseCursor
+----------------------------------- */
+
+.cursor {
+  @include pc {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: var(--pink);
+    z-index: 9;
+  }
+}

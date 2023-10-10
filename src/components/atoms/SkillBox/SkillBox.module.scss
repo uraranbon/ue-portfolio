@@ -1,0 +1,112 @@
+@use "../../../styles/Mixin.scss" as *;
+
+/* --------------------------------
+  skillBox
+----------------------------------- */
+
+.skillBox {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 26px 20px 20px;
+  border-radius: 10px;
+  background-color: rgba($color: var(--monotone02-rgba), $alpha: 0.5);
+  @include sp {
+    padding: 20px 10px 14px;
+  }
+}
+
+.percent {
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
+
+.graph {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+
+.circle {
+  position: relative;
+  fill: none;
+  stroke-width: 10;
+  stroke: rgba($color: var(--monotone01-rgba), $alpha: 0.1);
+  stroke-dasharray: 0;
+  stroke-dashoffset: 0;
+}
+
+.line {
+  animation: circleAnim 1s forwards;
+  stroke: var(--monotone01);
+}
+
+.icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  svg {
+    width: 46px;
+    height: 46px;
+  }
+  img {
+    max-width: 60px;
+  }
+  span {
+    font-size: 14px;
+    letter-spacing: 0.05em;
+  }
+}
+
+.text {
+  text-align: center;
+  margin-top: 20px;
+  line-height: 1.3;
+  small {
+    display: block;
+    font-size: 14px;
+    @include sp {
+      font-size: 12px;
+    }
+  }
+}
+
+.half .line {
+  stroke-dashoffset: 300;
+}
+.quarter .line {
+  stroke-dashoffset: 370;
+}
+.threeQuarters .line {
+  stroke-dashoffset: 229;
+}
+
+@-webkit-keyframes circleAnim {
+  0% {
+    stroke-dasharray: 0 440;
+  }
+  99.9%,
+  to {
+    stroke-dasharray: 440 440;
+  }
+}
+
+@keyframes circleAnim {
+  0% {
+    stroke-dasharray: 0 440;
+  }
+  99.9%,
+  to {
+    stroke-dasharray: 440 440;
+  }
+}

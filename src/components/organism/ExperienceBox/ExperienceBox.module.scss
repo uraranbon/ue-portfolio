@@ -1,0 +1,29 @@
+@use "../../../styles/Mixin.scss" as *;
+
+/* --------------------------------
+  ExperienceBox
+----------------------------------- */
+
+.experienceBox {
+  position: relative;
+  padding: 30px;
+  border-radius: 10px;
+  background-color: rgba($color: var(--monotone02-rgba), $alpha: 0.5);
+  @include sp {
+    padding: 20px;
+  }
+  .year {
+    margin-bottom: 8px;
+  }
+  .company {
+    font-size: 22px;
+    line-height: 1.3;
+    margin-bottom: 8px;
+    @include sp {
+      font-size: 18px;
+    }
+  }
+  .en {
+    margin-top: 30px;
+  }
+}

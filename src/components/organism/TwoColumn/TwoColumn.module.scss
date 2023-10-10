@@ -1,0 +1,24 @@
+@use "../../../styles/Mixin.scss" as *;
+
+/* --------------------------------
+  TwoColumn
+----------------------------------- */
+
+.twoColumn {
+  display: grid;
+  grid-template-columns: 3.5fr 6.5fr;
+  position: relative;
+  @include pc {
+    gap: 30px;
+  }
+  @include sp {
+    grid-template-columns: 1fr;
+  }
+  & > h2:first-child {
+    @include pc {
+      position: sticky;
+      top: 80px;
+      align-self: flex-start;
+    }
+  }
+}

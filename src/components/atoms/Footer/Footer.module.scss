@@ -1,0 +1,17 @@
+@use "../../../styles/Mixin.scss" as *;
+
+/* --------------------------------
+  footer
+----------------------------------- */
+
+.footer {
+  padding: 20px 10px;
+  text-align: center;
+  position: relative;
+  .copyright {
+    font-size: 14px;
+    @include sp {
+      font-size: 12px;
+    }
+  }
+}

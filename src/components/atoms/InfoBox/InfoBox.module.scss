@@ -1,0 +1,27 @@
+@use "../../../styles/Mixin.scss" as *;
+
+/* --------------------------------
+  infoBox
+----------------------------------- */
+.wrap {
+  @include sp {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+}
+
+.title {
+  font-size: 12px;
+  text-align: initial;
+  @include sp {
+    width: 40%;
+  }
+}
+
+.content {
+  font-weight: 500;
+  @include sp {
+    width: 60%;
+  }
+}

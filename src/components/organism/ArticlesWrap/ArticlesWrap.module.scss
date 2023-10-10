@@ -1,0 +1,11 @@
+@use "../../../styles/Mixin.scss" as *;
+
+/* --------------------------------
+  ArticlesWrap
+----------------------------------- */
+
+.articlesWrap {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}

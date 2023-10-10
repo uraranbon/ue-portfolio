@@ -4,22 +4,22 @@ import React from "react";
 import { motion } from "framer-motion";
 
 //atoms
-import ArticleLink from "../components/atoms/ArticleLink/ArticleLink";
-import Heading01 from "../components/atoms/Heading01/Heading01";
-import Heading02 from "../components/atoms/Heading02/Heading02";
-import SkillBox from "../components/atoms/SkillBox/SkillBox";
+import ArticleLink from "../../components/atoms/ArticleLink/ArticleLink";
+import Heading01 from "../../components/atoms/Heading01/Heading01";
+import Heading02 from "../../components/atoms/Heading02/Heading02";
+import SkillBox from "../../components/atoms/SkillBox/SkillBox";
 
 //organism
-import KeyVisual from "../components/organism/KeyVisual/KeyVisual";
-import ArticlesWrap from "../components/organism/ArticlesWrap/ArticlesWrap";
-import ContentWrap from "../components/organism/ContentWrap/ContentWrap";
-import SkillsWrap from "../components/organism/SkillsWrap/SkillsWrap";
-import ExperienceBox from "../components/organism/ExperienceBox/ExperienceBox";
-import WorksBox from "../components/organism/WorksBox/WorksBox";
-import TwoColumn from "../components/organism/TwoColumn/TwoColumn";
+import KeyVisual from "../../components/organism/KeyVisual/KeyVisual";
+import ArticlesWrap from "../../components/organism/ArticlesWrap/ArticlesWrap";
+import ContentWrap from "../../components/organism/ContentWrap/ContentWrap";
+import SkillsWrap from "../../components/organism/SkillsWrap/SkillsWrap";
+import ExperienceBox from "../../components/organism/ExperienceBox/ExperienceBox";
+import WorksBox from "../../components/organism/WorksBox/WorksBox";
+import TwoColumn from "../../components/organism/TwoColumn/TwoColumn";
 
 //templates
-import DefaultLayout from "../components/templates/DefaultLayout/DefaultLayout";
+import DefaultLayout from "../../components/templates/DefaultLayout/DefaultLayout";
 
 //icon
 import {
@@ -44,10 +44,10 @@ import {
 } from "react-icons/si";
 
 //data
-import { articles01 } from "../data/articles";
-import { articles02 } from "../data/articles";
+import { articles01 } from "../../data/articlesEn";
+import { articles02 } from "../../data/articlesEn";
 
-const Home = () => {
+const En = () => {
   return (
     <DefaultLayout>
       <KeyVisual />
@@ -66,10 +66,30 @@ const Home = () => {
             <ContentWrap>
               <div className="profile-box">
                 <p className="text">
-                  大学3年生のときにWeb制作会社の株式会社LIGへインターンとして参加し、卒業後の2015年に入社しました。文章が好きでライターになりたいと考えており、LIGが運営していた当時月間400万PVのオウンドメディアの運営に編集者として携わりました。その後、2016年にDevRelチームに所属していましたが、メンバーそのままでdotstudio株式会社として独立することになり、ついていきました。この会社でもIoT関連のメディア運用に携わりました。
+                  I joined web development company, LIG Inc., as an intern
+                  during my third year of university. After graduating, I
+                  officially joined the company in 2015. With a passion for
+                  writing and a desire to become a professional writer, I became
+                  an editor involved in managing LIG's owned media, which had a
+                  monthly traffic of 4 million PV at the time. Later in 2016, I
+                  joined the DevRel team, and when the team transitioned to an
+                  independent company called dotstudio Inc., I followed along.
+                  At dotstudio, I contributed to the operation of media
+                  platforms focusing on IoT-related content.
                   <br />
                   <br />
-                  株式会社LIG時代に仲良くなった先輩の一人がチーフエンジニアであり、話しているうちにウェブ制作に興味が出たことから、独学でウェブサイトをひとつ作りました。そのとき、入力した通りに画面が変わる反面、間違えると画面が何も変わらないというシンプルかつ難しい制作に面白さを感じ、もっと知識を深めたいと考え、2018年8月にWeb制作会社の株式会社BRISKへ入社しました。フロントエンドエンジニアとしてHTML、CSS、JavaScript、PHPなどを用いた制作をおこないました。
+                  During my time at LIG Inc., I became close with a senior
+                  colleague who was a Chief Engineer. Through our conversations,
+                  I developed an interest in web development, leading me to
+                  create my own website through self-study. The challenge of
+                  creating a website where the screen changes exactly as I
+                  inputted intrigued me, as even a small mistake would result in
+                  no change on the screen. This simplicity and complexity of web
+                  development fascinated me, motivating me to deepen my
+                  knowledge in the field. In August 2018, I joined BRISK Inc., a
+                  web development company, as a Front-End Engineer, where I
+                  utilized HTML, CSS, JavaScript, PHP, and other tools to create
+                  various web projects.
                 </p>
               </div>
             </ContentWrap>
@@ -101,35 +121,34 @@ const Home = () => {
           <TwoColumn>
             <Heading01 title="experience" />
             <ContentWrap>
-              <ExperienceBox
+            <ExperienceBox
                 date="2013.7～2015.3"
-                company="株式会社LIG"
-                position="インターンシップ - 編集者"
-                ja="エンタメメディアを運営し、最終的には月間100万PVのメディアに発展しました。インターン生5名をまとめる立場になり、外部のライターの記事管理も担当しました。"
+                company="LIG Inc."
+                position="Internship - Editor"
+                ja="I operated an entertainment media platform, which eventually grew to reach 1 million monthly page views. I took on the role of overseeing a team of five interns and also managed the articles contributed by external writers."
               />
               <ExperienceBox
                 date="2015.3"
-                company={"獨協大学外国語学部交流文化学科 卒業"}
-                position=""
-                ja=""
+                company={"Graduated from Dokkyo University"}
               />
               <ExperienceBox
                 date="2015.4~2016.7"
-                company="株式会社LIG"
-                position="メディア事業部 - 編集者"
-                ja="新卒入社し、当時月間400万PVのオウンドメディアの運営に編集者として携わりました。ウェブ制作に関する記事の編集や記事広告の作成、インタビューへの同行などに伴い写真撮影やデザイン制作などもおこないました。"
+                company="LIG Inc."
+                position="Media Department - Editor"
+                ja="I joined the company as a new graduate and worked as an editor involved in managing an owned media platform with a monthly traffic of 4 million PV. My responsibilities included editing web development-related articles, creating sponsored content, accompanying interviews, as well as handling tasks such as photography and design."
               />
               <ExperienceBox
                 date="2016.7~2016.11"
-                company="dotstudio株式会社"
-                position="テクニカルエディター"
-                ja="株式会社LIGで所属していたチームごと独立し、dotstudio株式会社にてIoTを推し進める事業に携わりました。事業の一環として、国内のIoT製品の代理販売をおこなったり、IoTに関する記事の執筆をおこないました。記事は自社メディアだけではなく、株式会社翔泳社が運営するWebメディア「CodeZine」にも寄稿しています。また、中国でのイベント出展（Maker Faire ShenZhen 2016）や、ニューヨークへIoT製品の取引先開拓・代理販売の交渉などをおこないました。"
+                company="dotstudio Inc."
+                position="Technical Editor"
+                ja='I independently joined dotstudio Inc., separating from the team at LIG Co., and engaged in promoting IoT-related businesses. As part of the business, I handled the distribution of domestic IoT products and wrote articles related to IoT. These articles were not only published on our own media but also contributed to "CodeZine," a web media operated by Shuwa System Co. Additionally, I participated in events in China, such as Maker Faire ShenZhen 2016, and conducted negotiations for exploring business partners and distribution of IoT products in New York."
+                  enCompany="dotstudio Inc.'
               />
               <ExperienceBox
                 date="2018.8~2023.4"
-                company="株式会社BRISK"
-                position="フロントエンドエンジニア"
-                ja="HTML、SCSS、JavaScriptなどを用いた制作や、WordPressを用いたサイト構築などをおこないました。ディレクションもおこない、制作で関わったほとんどの案件で見積もりから納品までを担当しました。"
+                company="BRISK Inc."
+                position="Front-End Engineer"
+                ja="As a front-end engineer, I worked on projects using HTML, SCSS, JavaScript, PHP, and other technologies. I also took part in project direction and was responsible for the entire process from estimation to delivery in most of the projects I was involved in."
               />
             </ContentWrap>
           </TwoColumn>
@@ -158,7 +177,7 @@ const Home = () => {
       >
         <div className="innerArea">
           <Heading01 title="skills" />
-          <Heading02 title="実務経験あり" />
+          <Heading02 title="Experienced in business" />
           <SkillsWrap>
             <SkillBox
               icon={<BiLogoHtml5 />}
@@ -186,12 +205,7 @@ const Home = () => {
             <SkillBox icon={<BiLogoVuejs />} text="Vue.js" name="half" />
             <SkillBox
               icon={<BiLogoWordpress />}
-              text={
-                <span>
-                  WordPress
-                  <small>30サイト程構築</small>
-                </span>
-              }
+              text="WordPress"
               name="threeQuarters"
             />
             <SkillBox
@@ -200,7 +214,7 @@ const Home = () => {
               name="quarter"
             />
           </SkillsWrap>
-          <Heading02 title="個人開発" />
+          <Heading02 title="Personal project" />
           <SkillsWrap>
             <SkillBox
               icon={<BiLogoTypescript />}
@@ -299,32 +313,32 @@ const Home = () => {
               <WorksBox
                 language="React × Next.js"
                 year="2023"
-                title="眞踏珈琲店 公式サイト（制作中）"
-                ja="喫茶店のサイトリニューアルを担当しています。Next.js（SSG）で作りました。アニメーションはFramer Motionでつけています。"
+                title="Mafumi Coffee official website (under construction)"
+                ja="A cafe website. Created with Next.js (SSG), animating with Framer Motion."
               />
               <WorksBox
                 language="jQuery"
                 year="2022"
-                title="大学の高校生向け特設サイト（クイズコンテンツ）"
-                ja="大学の高校生向け特設サイトの制作を担当しました。全10問の質問をランダムに表示し、結果ページには出題順に開設を載せる仕様です。企画・デザインは代理店で、開発を担当しました。開発では、ajaxを利用し、クイズの回答をDBに保存するようにしました。管理者ページから回答の一覧をエクセルで出力できるようにしました。"
+                title="University Quiz Content"
+                ja="I made a site for high school students seeking university info. With 10 random questions, results appear in question order. Agency made design, and I handled development. Used Ajax to save quiz responses to DB. Added admin page feature for exporting responses to Excel."
               />
               <WorksBox
                 language="Vue.js"
                 year="2021"
-                title="車メーカーの事前診断チェックサイト"
-                ja="車メーカーが販売している電気自動車の充電を自宅や職場でおこなえるか、事前に診断するサイトの構築を担当しました。全10問の質問をもとに充電可否の結果や費用を出します。企画・デザインは代理店で、制作や案件の窓口を担当し、ディレクションから開発、納品までを1人で担当しました。開発では、URLにパラメータを振り、そのURLを保存し後日ページへ入力すると診断結果を再度表示できるようにしました。結果を印刷して店舗にもっていけるよう、PDF出力ができるようにしています。"
+                title="Pre-diagnosis of car manufacturers"
+                ja="I built a site diagnosing whether users can charge EVs sold by a carmaker at home/work. Using 10 questions, it shows charging feasibility results and costs. Agency handled planning/design; I managed production and served as project contact. I oversaw direction, development, and delivery. Implemented URL parameters for result retrieval. Enabled PDF output for printing and store use."
               />
               <WorksBox
                 language="ejs"
                 year="2019~2021"
-                title="ホームセンターのイベント特設サイト（全5回）"
-                ja="ホームセンターが季節ごとにおこなうイベントの特設サイトを構築しました。企画・デザインは他社で、開発を担当しました。案件の窓口も担当し、ディレクションから開発、納品までを担当しました。30種類ほどの商品を登録する必要がありましたが、サーバーの関係でCMSを使うことができず、商品を展開しやすいようejsを導入しました。商品情報の入力のみ他メンバーに手伝ってもらい、他の開発は一人で担当しました。"
+                title="Campaign website for home improvement store"
+                ja="I developed a dedicated site for seasonal events hosted by a home center. Planning/design were by another company; I managed development. I served as the project point of contact, overseeing direction, development, and delivery. While needing to register around 30 products, CMS was not feasible due to server constraints. I introduced ejs for easier product deployment. I received assistance from team members for inputting product info, while handling other development tasks alone."
               />
               <WorksBox
                 language="HTML, SCSS, JavaScript"
                 year="2018~2023"
-                title="証券会社のサイト制作（LP（全20回程）と新卒向けサイト）"
-                ja="証券会社のキャンペーンLPと新卒向けサイトを構築しました。企画・デザインは他社で、開発を担当しました。案件の窓口も担当し、ディレクションから開発、納品までを担当しました。LPは年に6枚ほど制作し、アコーディオンやモーダル、アニメーションにJavaScriptを活用しました。"
+                title="Creation of a securities firm website (including around 20 LPs and a site for new graduates)."
+                ja="I developed a securities firm campaign LP and new graduate site. Planning/design were by another company; I handled development. I served as the project point of contact, overseeing direction, development, and delivery. Creating around 6 landing pages per year, I used JavaScript for accordions, modals, and animations."
               />
             </ContentWrap>
           </TwoColumn>
@@ -385,4 +399,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default En;

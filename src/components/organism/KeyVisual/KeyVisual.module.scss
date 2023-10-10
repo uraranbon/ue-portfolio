@@ -1,0 +1,68 @@
+@use "../../../styles/Mixin.scss" as *;
+
+/* --------------------------------
+  KeyVisual
+----------------------------------- */
+
+.keyBlock {
+  position: relative;
+  @include pc {
+    padding-top: 200px;
+    overflow: hidden;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  @include sp {
+    padding-top: 100px;
+  }
+  &::before {
+    content: "";
+    position: fixed;
+    width: 400px;
+    height: 400px;
+    right: 0;
+    left: 0;
+    top: 0;
+    margin: auto;
+    background: var(--pink);
+    filter: blur(220px);
+    @include sp {
+      width: 300px;
+      height: 300px;
+      filter: blur(120px);
+    }
+  }
+}
+
+.keyTitle {
+  text-align: center;
+  font-size: vw(138, 1060);
+  margin-left: vw(-10, 1060);
+  font-weight: bold;
+  margin-bottom: 40px;
+  white-space: nowrap;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  @include sp {
+    font-size: vw(49, 375);
+  }
+}
+
+.summaryWrap {
+  display: flex;
+  flex-wrap: wrap;
+  @include pc {
+    align-items: flex-start;
+    justify-content: center;
+    gap: 40px;
+  }
+  @include sp {
+    gap: 10px;
+  }
+}

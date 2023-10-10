@@ -1,0 +1,21 @@
+@use "../../../styles/Mixin.scss" as *;
+
+/* --------------------------------
+  SkillsWrap
+----------------------------------- */
+
+.skillsWrap {
+  display: grid;
+  gap: vw(24, 1366);
+  grid-template-columns: repeat(5, 1fr);
+  @include min(1367) {
+    gap: 24px;
+  }
+  @include max(1024) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  @include sp {
+    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

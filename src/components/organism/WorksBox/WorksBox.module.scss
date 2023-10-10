@@ -1,0 +1,46 @@
+@use "../../../styles/Mixin.scss" as *;
+
+/* --------------------------------
+  WorksBox
+----------------------------------- */
+
+.worksBox {
+  background-color: rgba($color: var(--monotone02-rgba), $alpha: 0.5);
+  height: 100%;
+  border-radius: 10px;
+  position: relative;
+  .image {
+    margin-bottom: 20px;
+  }
+  img {
+    height: auto;
+  }
+  .tagDateWrap {
+    display: flex;
+    align-items: center;
+    .tag {
+      padding: 2px 20px;
+      background-color: rgba($color: var(--pink-rgba), $alpha: 0.4);
+      border-radius: 30px;
+      display: inline-block;
+    }
+    .date {
+      margin-left: 8px;
+    }
+  }
+  .info {
+    padding: 20px;
+  }
+  .title {
+    font-weight: bold;
+    line-height: 1.7;
+    font-size: 20px;
+    @include sp {
+      line-height: 1.5;
+      font-size: 18px;
+    }
+  }
+  * + .title {
+    margin-top: 1em;
+  }
+}

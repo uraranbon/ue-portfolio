@@ -1,5 +1,15 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+## List of Tools Used
+
+- Framework: [Next.js](https://nextjs.org/)
+- Styling: [SCSS](https://sass-lang.com/)
+- Code Quality: [ESLint](https://eslint.org/)
+- Testing: [Cypress](https://www.cypress.io/)
+- Animation: [Framer Motion](https://www.framer.com/motion/)
+- Icon Components: [React Icons](https://react-icons.github.io/react-icons/)
+- Deployment: [Vercel](https://vercel.com/dashboard)
+
 ## Getting Started
 
 First, run the development server:

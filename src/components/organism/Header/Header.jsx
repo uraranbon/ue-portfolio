@@ -12,6 +12,9 @@ const poppins = Poppins({
   variable: '--font-en',
 });
 
+//icon
+import { TfiNewWindow } from 'react-icons/tfi';
+
 export default function Header() {
   const [navIsOpen, setNavIsOpen] = useState(false);
   const [languageMenuOpen, setLanguageMenuOpen] = useState(false);
@@ -119,6 +122,17 @@ export default function Header() {
             >
               articles
             </Scroll>
+          </li>
+          <li>
+            <a
+              href='https://www.yaco-web.com/'
+              target='_blank'
+            >
+              blog
+              <span className={styles.icon}>
+                <TfiNewWindow />
+              </span>
+            </a>
           </li>
         </ul>
         <div className={styles.languageSelector}>

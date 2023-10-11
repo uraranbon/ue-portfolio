@@ -326,6 +326,16 @@ const Home = () => {
                 title="証券会社のサイト制作（LP（全20回程）と新卒向けサイト）"
                 ja="証券会社のキャンペーンLPと新卒向けサイトを構築しました。企画・デザインは他社で、開発を担当しました。案件の窓口も担当し、ディレクションから開発、納品までを担当しました。LPは年に6枚ほど制作し、アコーディオンやモーダル、アニメーションにJavaScriptを活用しました。"
               />
+              <WorksBox
+                language="Next.js"
+                year="2023 ※個人開発"
+                title="テックブログ"
+                ja={
+                  <>
+                    microCMSとNext.jsを使い<a href="https://yaco-web.com/" target="_blank">ブログ</a>を作成しました。
+                  </>
+                }
+              />
             </ContentWrap>
           </TwoColumn>
         </div>

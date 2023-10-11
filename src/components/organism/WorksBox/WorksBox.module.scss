@@ -43,4 +43,12 @@
   * + .title {
     margin-top: 1em;
   }
+  a {
+    color: var(--pink);
+    text-decoration: underline;
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+  }
 }

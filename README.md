@@ -4,7 +4,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 - Framework: [Next.js](https://nextjs.org/)
 - Styling: [SCSS](https://sass-lang.com/)
-- Code Quality: [ESLint](https://eslint.org/)
+- Code Quality: [ESLint](https://eslint.org/),[Prettier](https://prettier.io/)
 - Testing: [Cypress](https://www.cypress.io/)
 - Animation: [Framer Motion](https://www.framer.com/motion/)
 - Icon Components: [React Icons](https://react-icons.github.io/react-icons/)

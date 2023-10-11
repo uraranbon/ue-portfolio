@@ -1,5 +1,5 @@
-import styles from "./WorksBox.module.scss";
-import { motion } from "framer-motion";
+import styles from './WorksBox.module.scss';
+import { motion } from 'framer-motion';
 
 export default function WorksBox({ language, year, title, ja }) {
   return (
@@ -18,8 +18,8 @@ export default function WorksBox({ language, year, title, ja }) {
           },
         },
       }}
-      initial="offscreen" // 初期表示はoffscreen
-      whileInView="onscreen" // 画面内に入ったらonscreen
+      initial='offscreen' // 初期表示はoffscreen
+      whileInView='onscreen' // 画面内に入ったらonscreen
       viewport={{ once: false, amount: 0 }}
     >
       <div className={styles.info}>

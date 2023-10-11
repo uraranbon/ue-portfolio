@@ -1,12 +1,7 @@
-import styles from "./ExperienceBox.module.scss";
-import { motion } from "framer-motion";
+import styles from './ExperienceBox.module.scss';
+import { motion } from 'framer-motion';
 
-export default function ExperienceBox({
-  date,
-  company,
-  position,
-  ja,
-}) {
+export default function ExperienceBox({ date, company, position, ja }) {
   return (
     <motion.article
       className={styles.experienceBox}
@@ -23,8 +18,8 @@ export default function ExperienceBox({
           },
         },
       }}
-      initial="offscreen" // 初期表示はoffscreen
-      whileInView="onscreen" // 画面内に入ったらonscreen
+      initial='offscreen' // 初期表示はoffscreen
+      whileInView='onscreen' // 画面内に入ったらonscreen
       viewport={{ once: false, amount: 0 }}
     >
       <time className={styles.year}>{date}</time>

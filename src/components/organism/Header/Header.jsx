@@ -1,15 +1,15 @@
-import { useState } from "react";
-import styles from "./Header.module.scss";
-import { Link as Scroll } from "react-scroll";
-import Link from "next/link";
-import { motion } from "framer-motion";
+import { useState } from 'react';
+import styles from './Header.module.scss';
+import { Link as Scroll } from 'react-scroll';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
 
 //font
-import { Poppins } from "next/font/google";
+import { Poppins } from 'next/font/google';
 const poppins = Poppins({
-  subsets: ["latin"],
-  weight: ["400", "500", "700"],
-  variable: "--font-en",
+  subsets: ['latin'],
+  weight: ['400', '500', '700'],
+  variable: '--font-en',
 });
 
 export default function Header() {
@@ -42,23 +42,25 @@ export default function Header() {
       exit={{ opacity: 0, y: 0, transition: { duration: 0.3, delay: 0.4 } }} // アンマウント時
     >
       <nav className={navIsOpen ? styles.isOpen : styles.isClose}>
-        <h1 className={styles.name}><Link href="/">urara enomoto</Link></h1>
+        <h1 className={styles.name}>
+          <Link href='/'>urara enomoto</Link>
+        </h1>
         <button
           className={styles.button}
           onClick={toggleNav}
           tabIndex={0}
-          aria-label={navIsOpen ? "メニューを閉じる" : "メニューを開く"}
-          aria-expanded={navIsOpen ? "true" : "false"}
+          aria-label={navIsOpen ? 'メニューを閉じる' : 'メニューを開く'}
+          aria-expanded={navIsOpen ? 'true' : 'false'}
         >
           <span className={styles.bar}></span>
         </button>
         <ul className={styles.links}>
           <li>
             <Scroll
-              href="#"
-              aria-label="profileへスクロール"
+              href='#'
+              aria-label='profileへスクロール'
               smooth={true}
-              to="profile"
+              to='profile'
               duration={600}
               onClick={closeNav}
               tabIndex={0}
@@ -68,10 +70,10 @@ export default function Header() {
           </li>
           <li>
             <Scroll
-              href="#"
-              aria-label="experienceへスクロール"
+              href='#'
+              aria-label='experienceへスクロール'
               smooth={true}
-              to="experience"
+              to='experience'
               duration={600}
               onClick={closeNav}
               tabIndex={0}
@@ -81,10 +83,10 @@ export default function Header() {
           </li>
           <li>
             <Scroll
-              href="#"
-              aria-label="skillsへスクロール"
+              href='#'
+              aria-label='skillsへスクロール'
               smooth={true}
-              to="skills"
+              to='skills'
               duration={600}
               onClick={closeNav}
               tabIndex={0}
@@ -94,10 +96,10 @@ export default function Header() {
           </li>
           <li>
             <Scroll
-              href="#"
-              aria-label="worksへスクロール"
+              href='#'
+              aria-label='worksへスクロール'
               smooth={true}
-              to="works"
+              to='works'
               duration={600}
               onClick={closeNav}
               tabIndex={0}
@@ -107,10 +109,10 @@ export default function Header() {
           </li>
           <li>
             <Scroll
-              href="#"
-              aria-label="articlesへスクロール"
+              href='#'
+              aria-label='articlesへスクロール'
               smooth={true}
-              to="articles"
+              to='articles'
               duration={600}
               onClick={closeNav}
               tabIndex={0}
@@ -123,16 +125,16 @@ export default function Header() {
           <button
             className={styles.languageButton}
             onClick={toggleLanguageMenu}
-            aria-expanded={languageMenuOpen ? "true" : "false"}
-            aria-haspopup="menu"
-            aria-label="Language Setting"
+            aria-expanded={languageMenuOpen ? 'true' : 'false'}
+            aria-haspopup='menu'
+            aria-label='Language Setting'
           >
             language
           </button>
           <ul className={languageMenuOpen ? styles.isOpen : styles.isClose}>
             <li>
               <Link
-                href="/en/"
+                href='/en/'
                 onClick={() => {
                   setLanguageMenuOpen(false);
                 }}
@@ -142,7 +144,7 @@ export default function Header() {
             </li>
             <li>
               <Link
-                href="/"
+                href='/'
                 onClick={() => {
                   setLanguageMenuOpen(false);
                 }}

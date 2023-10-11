@@ -7,14 +7,17 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "cypress": "cypress open"
+    "cypress": "cypress open",
+    "format": "prettier --write --ignore-path .gitignore './**/*.{js,jsx,json}'"
   },
   "dependencies": {
     "@next/font": "^13.5.4",
     "cypress": "^13.3.0",
     "cypress-axe": "^1.5.0",
+    "eslint-config-prettier": "^9.0.0",
     "framer-motion": "^10.16.4",
     "next": "13.5.4",
+    "prettier": "^3.0.3",
     "react": "^18",
     "react-dom": "^18",
     "react-icons": "^4.11.0",

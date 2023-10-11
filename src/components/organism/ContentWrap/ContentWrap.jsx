@@ -1,13 +1,7 @@
-
-import styles from './ContentWrap.module.scss'
+import styles from './ContentWrap.module.scss';
 
 export default function ContentWrap(props) {
-
   const { children } = props;
 
-  return (
-    <div className={styles.contentWrap}>
-      {children}
-    </div>
-  )
+  return <div className={styles.contentWrap}>{children}</div>;
 }

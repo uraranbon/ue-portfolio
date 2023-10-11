@@ -1,7 +1,7 @@
-import Footer from "../../atoms/Footer/Footer";
-import Header from "../../organism/Header/Header";
-import MouseCursor from "../../atoms/MouseCursor/MouseCursor";
-import { motion } from "framer-motion";
+import Footer from '../../atoms/Footer/Footer';
+import Header from '../../organism/Header/Header';
+import MouseCursor from '../../atoms/MouseCursor/MouseCursor';
+import { motion } from 'framer-motion';
 
 export default function DefaultLayout(props) {
   const { children } = props;

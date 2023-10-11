@@ -1,5 +1,5 @@
-import styles from "./MouseCursor.module.scss";
-import React, { useState, useEffect } from "react";
+import styles from './MouseCursor.module.scss';
+import React, { useState, useEffect } from 'react';
 
 export default function MouseCursor() {
   const [cursorXY, setCursorXY] = useState({ x: -100, y: -100 });
@@ -9,9 +9,9 @@ export default function MouseCursor() {
       const y = e.clientY - 16;
       setCursorXY({ x, y });
     };
-    window.addEventListener("mousemove", moveCursor);
+    window.addEventListener('mousemove', moveCursor);
     return () => {
-      window.removeEventListener("mousemove", moveCursor);
+      window.removeEventListener('mousemove', moveCursor);
     };
   }, []);
 

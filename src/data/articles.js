@@ -82,4 +82,4 @@ export const articles02 = [
     date: '2013.9 - 2014.12',
     text: 'iKnow!BLOG ※現在は「DMM英会話ブログ」',
   },
-]
+];

@@ -1,14 +1,14 @@
-import React from "react";
-import styles from "./KeyVisual.module.scss";
-import { motion } from "framer-motion";
-import InfoBox from "../../atoms/InfoBox/InfoBox";
+import React from 'react';
+import styles from './KeyVisual.module.scss';
+import { motion } from 'framer-motion';
+import InfoBox from '../../atoms/InfoBox/InfoBox';
 
 //font
-import { Poppins } from "next/font/google";
+import { Poppins } from 'next/font/google';
 const poppins = Poppins({
-  subsets: ["latin"],
-  weight: ["400", "500", "700"],
-  variable: "--font-en",
+  subsets: ['latin'],
+  weight: ['400', '500', '700'],
+  variable: '--font-en',
 });
 
 const KeyVisual = () => {
@@ -34,7 +34,7 @@ const KeyVisual = () => {
       >
         urara enomoto
       </motion.h2>
-      <div className="innerArea">
+      <div className='innerArea'>
         <motion.div
           className={styles.summaryWrap}
           initial={{
@@ -54,12 +54,21 @@ const KeyVisual = () => {
           }} // アンマウント時
         >
           <InfoBox
-            title="Engineering Work Experience"
-            content="5 years (since 2018)"
+            title='Engineering Work Experience'
+            content='5 years (since 2018)'
           />
-          <InfoBox title="Currently Learning" content="React & Next.js" />
-          <InfoBox title="Location" content="Tokyo" />
-          <InfoBox title="Languages" content="Japanese & English" />
+          <InfoBox
+            title='Currently Learning'
+            content='React & Next.js'
+          />
+          <InfoBox
+            title='Location'
+            content='Tokyo'
+          />
+          <InfoBox
+            title='Languages'
+            content='Japanese & English'
+          />
         </motion.div>
       </div>
     </section>

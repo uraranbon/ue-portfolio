@@ -1,11 +1,11 @@
-import styles from "./Footer.module.scss";
+import styles from './Footer.module.scss';
 
 //font
-import { Poppins } from "next/font/google";
+import { Poppins } from 'next/font/google';
 const poppins = Poppins({
-  subsets: ["latin"],
-  weight: ["400", "500", "700"],
-  variable: "--font-en",
+  subsets: ['latin'],
+  weight: ['400', '500', '700'],
+  variable: '--font-en',
 });
 
 export default function Footer() {

@@ -11,7 +11,6 @@
     "format": "prettier --write --ignore-path .gitignore './**/*.{js,jsx,json}'"
   },
   "dependencies": {
-    "@next/font": "^13.5.4",
     "cypress": "^13.3.0",
     "cypress-axe": "^1.5.0",
     "eslint-config-prettier": "^9.0.0",
